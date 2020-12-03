@@ -1,0 +1,34 @@
+{# TP3/template/pages/home.html.twig #}
+
+{% extends 'base.html.twig' %}
+
+
+
+{% block body %}
+
+    <div class="container mt-4 text-center">
+        <h1>Ajout d'une nouvelle destination </h1>
+
+
+    </div>
+
+
+    <div class="container mt-4">
+
+        {{ form_start(form) }}
+
+        {{ form_widget(form) }}
+        <button class="btn btn-primary">Ajouter</button>
+        {{ form_end(form) }}
+
+    </div>
+
+
+
+
+
+    {% block content %}{% endblock %}
+
+
+
+{% endblock %}

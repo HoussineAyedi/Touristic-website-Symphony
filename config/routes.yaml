@@ -1,0 +1,29 @@
+home:
+   path: /
+   controller: App\Controller\HomeController::index
+
+destination:
+    path: /Dest
+    controller: App\Controller\DestinationController::index
+logout:
+  path: /logout
+
+#ville:
+#      path: /ville
+#     controller: App\Controller\VilleController::index
+
+#circuit:
+#   path: /circuit
+#   controller: App\Controller\CircuitController::index
+
+#etapecr:
+#   path: /etapecr
+#   controller: App\Controller\EtapeCrController::index
+
+
+
+#index:
+#    path: /
+#    controller: App\Controller\DefaultController::index
+
+ 

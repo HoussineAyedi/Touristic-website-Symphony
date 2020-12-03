@@ -1,0 +1,29 @@
+
+
+{% extends 'base.html.twig' %}
+
+
+
+
+{% block body %}
+<div class="jumbotron text-center">
+
+    {% for circuit in circuits %}
+<p class="center">  </p>
+
+
+    <br>
+    Code du ville : {{ circuit.getCodeCircuit() }}
+    <br>
+    Des_Circuit {{ circuit.getDesCircuit() }}
+    <br>
+    Durée du circuit : {{ circuit.getDuree() }}
+
+    {% endfor %}
+</div>
+
+    {% block content %}{% endblock %}
+
+
+
+{% endblock %}

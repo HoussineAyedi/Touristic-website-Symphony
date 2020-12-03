@@ -1,0 +1,33 @@
+
+
+{% extends 'base.html.twig' %}
+
+
+
+
+{% block body %}
+<div class="jumbotron text-center">
+
+
+
+
+
+
+<p class="center">  </p>
+
+    id ville : {{ ville.getId() }}
+<br>
+    code de la ville : {{ ville.getCodeVille() }}
+    <br>
+    Des_ville
+    {{ ville.getDesVille() }}
+    <br>
+    Dest_ville de reference
+    {{ ville.getDestTest().getDestTest() }}
+</div>
+
+    {% block content %} {% endblock %}
+
+
+
+{% endblock %}

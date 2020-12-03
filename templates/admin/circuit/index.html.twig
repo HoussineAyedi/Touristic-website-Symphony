@@ -1,0 +1,63 @@
+
+{% extends 'base.html.twig' %}
+
+
+
+{% block title %} {% endblock %}
+{% block body %}
+
+
+    <div class="jumbotron text-center">
+        <h1> Agence Tour DSI22 Liste des circuits </h1>
+    </div>
+
+
+
+
+
+<table class="table table-striped">
+<thead>
+    <tr>
+        <th> Code Circuit </th>
+        <th> Nom du circuit </th>
+        <th> Durée </th>
+
+
+    </tr>
+</thead>
+    <tbody>
+    {%for dest in dests %}
+    <tr>
+        <td>{{ dest.getCodeCircuit() }}</td>
+        <td>{{ dest.getDesCircuit() }}</td>
+        <td>{{ dest.getDuree() }}</td>
+
+    {% endfor %}
+
+
+
+
+
+
+
+
+    <tr>
+        <td> </td>
+        <td> </td>
+        <td>
+
+        </td>
+        <td> </td>
+    </tr>
+
+    </tbody>
+
+</table>
+
+
+
+    {% block content %}{% endblock %}
+
+
+
+{% endblock %}

@@ -1,0 +1,74 @@
+
+{% extends 'base.html.twig' %}
+
+
+
+{% block title %} {% endblock %}
+{% block body %}
+
+
+    <div class="jumbotron text-center">
+        <h1> Agence Tour DSI22 Espace de gestion des etapes de circuits </h1>
+    </div>
+
+
+
+
+
+<table class="table table-striped">
+<thead>
+    <tr>
+        <th> Ville </th>
+        <th> Circuit </th>
+        <th> Durée </th>
+        <th> Ordre </th>
+        <th> Actions </th>
+    </tr>
+</thead>
+    <tbody>
+    {%for dest in dests %}
+    <tr>
+        <td>{{ dest.getVille().getDesVille() }}</td>
+        <td>{{ dest.getCircuit().getCodeCircuit() }}</td>
+        <td>{{ dest.getDuree() }}</td>
+        <td>{{ dest.getOrdre() }}</td>
+        <td>
+            <a href="{{ path('admin.etapecr.edit',{id: dest.id}) }}" class="btn btn-secondary">Editer</a>
+            <form action="{{ path('admin.etapecr.delete',{id: dest.id}) }}" style="display: inline-block" onsubmit="return confirm('Etes vous sur')" >
+                <input type="hidden" name="_method" value="DELETE ">
+                <button class="btn btn-danger">Supprimer </button>
+            </form>
+        </td>
+    </tr>
+    {% endfor %}
+
+
+
+
+
+
+
+
+    <tr>
+        <td> </td>
+        <td> </td>
+        <td>
+            <div class="text-right">
+                <a href=" {{ path('admin.etapecr.new') }}" class="btn btn-primary"> Ajouter une etape Circuit </a>
+            </div>
+        </td>
+        <td> </td>
+        <td> </td>
+    </tr>
+
+    </tbody>
+
+</table>
+
+
+
+    {% block content %}{% endblock %}
+
+
+
+{% endblock %}

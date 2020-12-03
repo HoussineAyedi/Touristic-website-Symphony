@@ -1,0 +1,40 @@
+
+
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<div class="jumbotron text-center">
+
+
+    <div class="container">
+
+        {% for etcr in etcrs %}
+            <div class="col-3">
+                <div class="card">
+
+                    <div class="card-body">
+
+                        <h6 class="card-title">
+
+                            id EtapeCircuit: {{ etcr.getId() }}
+                            <br>
+                            code de la ville : {{ etcr.getVille().getDesVille }}
+                            <br>
+                            Le circuit: {{ etcr.getCircuit().getDesCircuit() }}
+                            <br>
+                            La durée :
+                            {{ etcr.getDuree() }}
+                            <br>
+                            L'ordre :
+                            {{ etcr.getOrdre }}
+                        </h6>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+
+    {% block content %}{% endblock %}
+
+
+
+{% endblock %}
